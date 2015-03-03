@@ -42,9 +42,10 @@ Do you?
 ---
 # unix
 
-> Architectures should not be supplied by frameworks. Frameworks are tools to
-> be used, not architectures to be conformed to. If your architecture is based
-> on frameworks, then it cannot be based on your use cases.
+When you look at the top level directory structure, and the source files 
+in the highest level package; do they scream: Health Care System, 
+or Accounting System, or Inventory Management System? Or do they scream: 
+Rails, or Spring/Hibernate, or ASP?
 
 – Uncle Bob Martin, "Screaming Architecture"
 
