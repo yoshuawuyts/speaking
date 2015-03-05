@@ -1,63 +1,131 @@
 ```
-  _   _ _____  __  __                                            
- | \ | |  __ \|  \/  |                                           
- |  \| | |__) | \  / |                                           
- | . ` |  ___/| |\/| |                                           
- | |\  | |    | |  | |_                                          
- |_| \_|_|    |_|  |_( )_   __  __           _       _           
- | |                 |/| | |  \/  |         | |     | |          
- | |     ___   ___ __ _| | | \  / | ___   __| |_   _| | ___  ___ 
- | |    / _ \ / __/ _` | | | |\/| |/ _ \ / _` | | | | |/ _ \/ __|
- | |___| (_) | (_| (_| | | | |  | | (_) | (_| | |_| | |  __/\__ \
- |______\___/ \___\__,_|_| |_|  |_|\___/ \__,_|\__,_|_|\___||___/
-                  _  __     __                                   
-                 | | \ \   / /                                   
-   __ _ _ __   __| |  \ \_/ /__  _   _                           
-  / _` | '_ \ / _` |   \   / _ \| | | |                          
- | (_| | | | | (_| |    | | (_) | |_| |                          
-  \__,_|_| |_|\__,_|    |_|\___/ \__,_|                          
-                                                                 
-                                               
+┌─────────────────────────┐
+│                         │
+│    NPM, local modules   │███
+│    & you                │███
+│                         │███
+│    Yoshua Wuyts         │███
+│    2015-03-05           │███
+│                         │███
+└─────────────────────────┘███
+   ███████████████████████████
+   ███████████████████████████
 ```
-AmsterdamJS
-yoshua wuyts
-2015-03-05
-
 ---
 # hello, I'm yoshua
 
-Nice to meet you
-
----
-# and I use npm
-
-Do you?
+- writes a lot of JS
+- for wercker
+- and Open Source
 
 ---
 # unix
+
 - been around since the 1970's
-- principles have also been around since then
-- still used in every day computing
+- holy scriptures of programming
 
 ---
-# unix
+# node architecture
 
-When you look at the top level directory structure, and the source files 
-in the highest level package; do they scream: Health Care System, 
-or Accounting System, or Inventory Management System? Or do they scream: 
-Rails, or Spring/Hibernate, or ASP?
+## Relative paths
 
-– Uncle Bob Martin, "Screaming Architecture"
+[demo 01]
 
 ---
-# unix
+# node architecture
 
-> Loose coupling is an approach to interconnecting the components in a system
-> or network so that those components, also called elements, depend on each
-> other to the least extent practicable. Coupling refers to the degree of
-> direct knowledge that one element has of another.
+## Relative paths
 
-- wikipedia on loose coupling
+ ✔ modular code
+ ✖ loose coupling
+ ✖ easy extraction to npm
+ ✖ modularized dependencies
+ ✖ flat directory structure
+ ✔ explicitly local
 
 ---
-# unix 
+# node architecture
+
+## node_modules
+
+[demo 02]
+
+---
+# node architecture
+
+## Relative paths
+
+ ✔ modular code
+ ✔ loose coupling
+ ✖ easy extraction to npm
+ ✖ scoped dependencies
+ ✖ flat directory structure
+ ✖ explicitly local
+
+---
+# node architecture
+
+## node_modules
+
+[demo 03]
+
+---
+# node architecture
+
+## Relative paths
+
+ ✔ modular code
+ ✔ loose coupling
+ ✔ easy extraction to npm
+ ✔ modularized dependencies
+ ✖ flat directory structure
+ ✖ explicitly local
+
+----
+# node architecture
+
+## node_modules
+
+[demo 03]
+
+---
+# node architecture
+
+## Relative paths
+
+ ✔ modular code
+ ✔ loose coupling
+ ✔ easy extraction to npm
+ ✔ modularized dependencies
+ ✖ flat directory structure
+ ✖ explicitly local
+
+----
+
+```
+┌─────────────────────────┐
+│                         │
+│    Wercker is hiring!   │███
+│                         │███
+│       pleasemailus      │███
+│       @wercker.com      │███
+│                         │███
+└─────────────────────────┘███
+   ███████████████████████████
+   ███████████████████████████
+```
+
+---
+```
+┌────────────────────────────┐
+│    NODESCHOOL AMSTERDAM    │
+│           presents         │███
+│                            │███
+│                            │███
+│   INTERNATIONAL DAY 2015   │███
+│           May 23rd         │███
+└────────────────────────────┘███
+   ██████████████████████████████
+   ██████████████████████████████
+```
+
