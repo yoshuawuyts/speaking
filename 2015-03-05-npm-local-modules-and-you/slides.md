@@ -53,55 +53,73 @@
 ---
 # node architecture
 
-## Relative paths
+## node_modules
 
  ✔ modular code
  ✔ loose coupling
- ✖ easy extraction to npm
- ✖ scoped dependencies
+ ✔ easy extraction to npm
+ ✔ scoped dependencies
  ✖ flat directory structure
  ✖ explicitly local
 
 ---
 # node architecture
 
-## node_modules
+## namespaces
 
 [demo 03]
 
 ---
 # node architecture
 
-## Relative paths
+## namespaces
 
  ✔ modular code
  ✔ loose coupling
  ✔ easy extraction to npm
  ✔ modularized dependencies
  ✖ flat directory structure
- ✖ explicitly local
+ ✔ explicitly local
 
 ----
 # node architecture
 
-## node_modules
+## local modules
 
-[demo 03]
+[demo 04]
 
 ---
 # node architecture
 
-## Relative paths
+## local modules
 
  ✔ modular code
  ✔ loose coupling
  ✔ easy extraction to npm
  ✔ modularized dependencies
- ✖ flat directory structure
- ✖ explicitly local
+ ✔ flat directory structure
+ ✔ explicitly local
+
+---
+# node architecture
+
+## linklocal
+
+[demo 06]
+
+---
+# node architecture
+
+## linklocal
+
+ ✔ modular code
+ ✔ loose coupling
+ ✔ easy extraction to npm
+ ✔ modularized dependencies
+ ✔ flat directory structure
+ ✔ explicitly local
 
 ----
-
 ```
 ┌─────────────────────────┐
 │                         │
