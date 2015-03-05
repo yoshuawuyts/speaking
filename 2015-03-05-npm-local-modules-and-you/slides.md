@@ -151,4 +151,10 @@
    ██████████████████████████████
    ██████████████████████████████
 ```
+---
+# Thank you!
 
+github:  yoshuawuyts
+twitter: @yoshuawuyts
+
+Or offline where the beer is.
