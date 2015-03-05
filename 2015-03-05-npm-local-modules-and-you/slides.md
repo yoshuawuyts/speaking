@@ -37,6 +37,7 @@
 ## Relative paths
 
  ✔ modular code
+ ✔ live updates
  ✖ loose coupling
  ✖ easy extraction to npm
  ✖ modularized dependencies
@@ -56,6 +57,7 @@
 ## node_modules
 
  ✔ modular code
+ ✔ live updates
  ✔ loose coupling
  ✔ easy extraction to npm
  ✔ scoped dependencies
@@ -75,6 +77,7 @@
 ## namespaces
 
  ✔ modular code
+ ✔ live updates
  ✔ loose coupling
  ✔ easy extraction to npm
  ✔ modularized dependencies
@@ -94,6 +97,7 @@
 ## local modules
 
  ✔ modular code
+ ✖ live updates
  ✔ loose coupling
  ✔ easy extraction to npm
  ✔ modularized dependencies
@@ -105,7 +109,7 @@
 
 ## linklocal
 
-[demo 06]
+[demo 05]
 
 ---
 # node architecture
@@ -113,6 +117,7 @@
 ## linklocal
 
  ✔ modular code
+ ✔ live updates
  ✔ loose coupling
  ✔ easy extraction to npm
  ✔ modularized dependencies
@@ -125,7 +130,7 @@
 │                         │
 │    Wercker is hiring!   │███
 │                         │███
-│       pleasemailus      │███
+│           werck         │███
 │       @wercker.com      │███
 │                         │███
 └─────────────────────────┘███
