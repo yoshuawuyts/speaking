@@ -1,7 +1,10 @@
 - tools of the trade (npm, browserify, commonjs)
 - talk about unix principles and why it's a good idea to use small things
 - discoverability (show off npm search?, list stuff?)
-- write code!
-- talk about how concepts can have different implementations
-- small components / actual renderables
-
+- show a bunch of cool stuff
+- es6 + browserify
+- wzrd
+- glslify
+- some mvc router stuffs ? 
+- deku + es6 template strings vs react
+- webcomponent polyfills
