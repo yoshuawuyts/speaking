@@ -67,8 +67,8 @@
 
 ---
 # Thank you!
-github:  yoshuawuyts
-twitter: @yoshuawuyts
+- github:  yoshuawuyts
+- twitter: @yoshuawuyts
 
 Or offline, fast asleep.
 
