@@ -35,3 +35,38 @@ isomorphic client.
 - possible default to webcomponents since it's a standard
 - expose internals so wrappers are possible
 - mention custom-element
+
+#mk2
+## uniform components
+- button
+- list
+- form
+
+## build on top of these abstractions
+- infinite scrolling
+- button with several states
+- dom events
+- xhr submission
+
+## work towards specific use cases
+- twitter feed
+- facebook like button
+- login form for your new startup?
+
+## wrapped for any framework you want
+- webcomponents
+- react
+- ember
+
+## tools
+- npm = isomorphic code
+- base element that renders both server + client
+- shared-abstractions-as-a-module: lowest common denominator
+
+## find the correct abstractions
+At fabrique I heard people were looking for stuff that did touch events well.
+How do you handle that? What's the correct way of listening to keybindings and
+firing events based on that?
+
+Oh, and don't forget to shit on react router for being everything that is wrong
+with client side code.
