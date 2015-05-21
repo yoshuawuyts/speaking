@@ -1,5 +1,5 @@
 # proposal
-previous talks included:
+Previous talks included:
 - local modules
 - neat modules for the client
 
