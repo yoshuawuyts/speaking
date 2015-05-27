@@ -18,3 +18,6 @@ on the frontend are building mostly monoliths. How can we unbundle our clients
 without repeating ourselves? How can we prepare our code to be compatible with
 The Next Big Framework? (And the one after that?) Let me show you a glimpse of
 the future.
+
+## See Also
+- [substack/jsdc.tw-2014](https://raw.githubusercontent.com/substack/jsdc.tw-2014/master/readme.markdown) - used format + unix slides
