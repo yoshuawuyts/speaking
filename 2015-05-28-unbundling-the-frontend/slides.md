@@ -88,7 +88,7 @@ render a custom element from html:
 
 lifecycle hooks:
 
-```
+``` js
 .createdCallback()          // after element was created
 .attachedCallback()         // after element was attached to DOM
 .detachedCallback()         // after element was detached from dom
