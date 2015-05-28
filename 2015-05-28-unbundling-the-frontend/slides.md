@@ -8,7 +8,7 @@ Yoshua Wuyts
 
 ```
 $ npm install -g tslide
-$ tslide slides.md
+$ tslide README.md
 ```
 
 Frontend Developer Meetup Ams May 2015
