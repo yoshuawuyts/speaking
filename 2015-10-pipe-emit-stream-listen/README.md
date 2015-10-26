@@ -48,6 +48,20 @@
 ---
 
 ## Basics
+Streams originate from the unix shell
+```sh
+$ cat ./my-file > ./other-file
+```
+```js
+const fs = require('fs')
+
+fs.createReadStream('./my-file')
+  .pipe(fs.createWriteStream('./other-file'))
+```
+
+---
+
+## Basics
 4 types of streams
 - read: data can be read from
 - write: data can be written to
@@ -65,16 +79,11 @@
 ---
 
 ## Basics
-Streams originate from the unix shell
-```sh
-$ cat ./my-file > ./other-file
-```
-```js
-const fs = require('fs')
-
-fs.createReadStream('./my-file')
-  .pipe(fs.createWriteStream('./other-file'))
-```
+buffers!
+- binary data (octet)
+- allocated on the heap
+- different garbage collection
+- performant
 
 ---
 
@@ -111,7 +120,7 @@ rs.pipe(ts).pipe(ws)
 
 function grep (regex) {
   return through((chunk, enc, cb) => {
-    if (regex.test(chunk.toString())) this.push(chunk)
+    if (regex.test(String(chunk)) this.push(chunk)
     cb()
   })
 }
@@ -247,5 +256,5 @@ And much much more!
 - github.com/yoshuawuyts
 
 Slides available on
-- https://github.com/yoshuawuyts/talks/2015-10-
+- https://github.com/yoshuawuyts/talks/2015-10-pipe-stream-emit-listen
 - npm i -g tslide to view the slides
