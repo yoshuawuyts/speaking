@@ -1,0 +1,6 @@
+- tcpdump
+- dtrace
+- ndjson
+- why logs?
+- what to log?
+- how to log it?
