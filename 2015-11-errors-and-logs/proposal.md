@@ -1,4 +1,4 @@
-# proposal
+# Logs and error handling in Node.js
 You cannot fix what you don't know is broken. Keeping logs and handling errors
 is crucial for any application in production. In this talk yosh will show you
 how to sustainably approach logs and error handling for applications on any
