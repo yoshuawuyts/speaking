@@ -97,6 +97,11 @@ throw err
 ---
 
 ## 2. Creating errors
+Demo 1
+
+---
+
+## 2. Creating errors
 Expected errors:
 ```js
 const value = { foo: 'bar' }
@@ -107,13 +112,18 @@ validate(value, function (err, res) {
 
 // (obj, fn(err?, val?)) -> null
 function validate (obj, cb) {
-  if (!obj.bin) {
-    const err = new Error('no bin')
+  if (!obj.baz) {
+    const err = new Error('No baz property')
     return cb(err)
   }
   cb(null, 'success!')
 }
 ```
+
+---
+
+## 2. Creating errors
+Demo 2
 
 ---
 
@@ -130,6 +140,11 @@ function square (num) {
   return num * num
 }
 ```
+
+---
+
+## 2. Creating errors
+Demo 3
 
 ---
 
@@ -151,7 +166,6 @@ NDJSON: Newline Delimited JSON (ndjson.org)
 ```js
 console.log(JSON.stringify({ foo: 'bar' }) + '\n')
 ```
-
 
 ---
 
@@ -289,6 +303,11 @@ server.listen(8080, summary(server))
 ---
 
 ## 5. Packages
+Demo 4
+
+---
+
+## 5. Packages
 Log http req,res:
 ```js
 const boleStream = require('bole-stream')
@@ -300,6 +319,11 @@ http.createServer(function (req, res) {
   httpLogger.pipe(logStream, { end: false })
 }).listen()
 ```
+
+---
+
+## 5. Packages
+Demo 5
 
 ---
 
@@ -322,6 +346,11 @@ http.createServer(function (req, res) {
   app(req, res).pipe(size).pipe(res)
 }).listen()
 ```
+
+---
+
+## 5. Packages
+Demo 6
 
 ---
 

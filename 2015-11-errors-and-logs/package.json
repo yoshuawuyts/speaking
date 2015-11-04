@@ -1,0 +1,20 @@
+{
+  "name": "2015-11-errors-and-logs",
+  "version": "1.0.0",
+  "description": "``` ┌─────────────────────────┐ │                         │██ │    Logging and error    │██ │    handling in Node.js  │██ │                         │██ │    Yoshua Wuyts         │██ │    2015-11-05           │██ │                         │██ └─────────────────────────┘██   ███████████████████████████ ```",
+  "main": "1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yoshua Wuyts <i@yoshuawuyts.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bole": "^2.0.0",
+    "bole-stream": "^2.1.0",
+    "http-ndjson": "^2.3.3",
+    "pump": "^1.0.1",
+    "pumpify": "^1.3.3",
+    "server-summary": "^4.0.1",
+    "size-stream": "^1.0.1"
+  }
+}
