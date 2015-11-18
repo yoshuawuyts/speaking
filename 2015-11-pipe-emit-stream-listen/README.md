@@ -12,7 +12,6 @@
 ```
 
 ---
-
 ## Hello, I'm Yosh
 - interfaces
 - unix
@@ -20,7 +19,6 @@
 - consulting
 
 ---
-
 ## How to learn streams?
 - star all of @mafintosh's modules
 - write an article on how to use streams
@@ -29,7 +27,6 @@
 - give a talk on streams
 
 ---
-
 ## Streams in 20 mins
 - why streams?
 - how do streams work?
@@ -37,7 +34,6 @@
 - cool things
 
 ---
-
 ## Why streams?
 - _extremely_ fast
 - composable
@@ -46,7 +42,6 @@
 - based on events (observables!)
 
 ---
-
 ## Basics
 Streams originate from the unix shell
 ```sh
@@ -60,7 +55,10 @@ fs.createReadStream('./my-file')
 ```
 
 ---
+## Basics
+[ Demo 1 ]
 
+---
 ## Basics
 4 types of streams
 - read: data can be read from
@@ -70,14 +68,12 @@ fs.createReadStream('./my-file')
   transformed and then read from
 
 ---
-
 ## Basics
 2 stream modes
 - default: operate on buffers and strings
 - objectMode: operate on anything
 
 ---
-
 ## Basics
 buffers!
 - binary data (octet)
@@ -86,7 +82,6 @@ buffers!
 - performant
 
 ---
-
 ## Basics
 Streams use events under the hood
 ```js
@@ -96,14 +91,21 @@ const stream = require('readable-stream')
 const stream1 = new stream.PassThrough()
 const stream2 = new stream.PassThrough()
 
-stream1.on('readable', () => {
-  stream1.on('data', (data) => stream2.write(data))
-  stream1.on('end', () => stream2.end())
+stream1.on('readable', function () {
+  stream1.on('data', function (data) {
+    stream2.write(data)
+  })
+  stream1.on('end', function () {
+    stream2.end()
+  })
 })
 ```
 
 ---
+## Basics
+[ Demo 2 ]
 
+---
 ## Basics
 Read -> transform -> write
 ```sh
@@ -127,7 +129,10 @@ function grep (regex) {
 ```
 
 ---
+## Basics
+[ Demo 3 ]
 
+---
 ## Async
 Deferred streams (performant promise alternative)
 ```js
@@ -147,7 +152,6 @@ function myAsyncFn () {
 ```
 
 ---
-
 ## Modules
 Event handling is cumbersome, modules make it better
 ```js
@@ -165,7 +169,6 @@ pump(rs, ws, function (err) {
 ```
 
 ---
-
 ## Modules
 HTTP servers! Write a file to the client
 ```js
@@ -179,7 +182,6 @@ http.createServer((req, res) => {
 ```
 
 ---
-
 ## Modules
 Databases! Scan a full db on each request
 ```js
@@ -194,7 +196,6 @@ http.createServer((req, res) => {
 ```
 
 ---
-
 ## Modules
 HTML templates!
 ```js
@@ -211,7 +212,6 @@ http.createServer((req, res) => {
 ```
 
 ---
-
 ## Modules
 Torrents!
 ```js
@@ -230,7 +230,6 @@ engine.on('ready', () => engine.files.forEach(file => {
 ```
 
 ---
-
 ## Modules
 And much much more!
 - tar-stream (zip / tar)
@@ -241,7 +240,6 @@ And much much more!
 - airswarm (local mesh networking)
 
 ---
-
 ## Recap
 - 4 types of streams
 - communicate using events
@@ -250,7 +248,6 @@ And much much more!
 - there's a (stream) package for that
 
 ---
-
 ## Thank.pipe(you)!
 - twitter.com/yoshuawuyts
 - github.com/yoshuawuyts
