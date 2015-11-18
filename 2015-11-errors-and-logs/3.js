@@ -1,6 +1,6 @@
 const assert = require('assert')
 
-square('definitely not a number')
+square(3)
 
 function square (num) {
   // compare and throw if false
