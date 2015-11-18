@@ -121,8 +121,8 @@ const ws = process.stdout
 rs.pipe(ts).pipe(ws)
 
 function grep (regex) {
-  return through((chunk, enc, cb) => {
-    if (regex.test(String(chunk)) this.push(chunk)
+  return through(function (chunk, enc, cb) {
+    if (regex.test(String(chunk))) this.push(chunk)
     cb()
   })
 }
@@ -177,9 +177,13 @@ const fs = require('fs')
 
 http.createServer((req, res) => {
   res.setHeader('Content-Type', 'text/css')
-  fs.createReadStream('./my-css').pipe(res)
+  fs.createReadStream().pipe(res)
 }).listen()
 ```
+
+---
+## Modules
+[ Demo 4 ]
 
 ---
 ## Modules
@@ -232,7 +236,7 @@ engine.on('ready', () => engine.files.forEach(file => {
 ---
 ## Modules
 And much much more!
-- tar-stream (zip / tar)
+- tar-stream (handle tar archives)
 - ssejson (server sent events)
 - pbs (protocol buffers)
 - response-stream (http)
