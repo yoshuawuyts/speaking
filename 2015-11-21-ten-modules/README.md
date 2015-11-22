@@ -17,6 +17,10 @@
 - node
 - consulting
 
+---
+## WARNING
+## MAD SCIENCE AHEAD
+
 ----
 ## Electron
 - hihat
@@ -49,3 +53,12 @@
 ---
 ## Sound
 - baudio
+
+---
+## Thank you!
+- twitter.com/yoshuawuyts
+- github.com/yoshuawuyts
+
+Slides available on:
+- https://github.com/yoshuawuyts/talks/2015-11-21-ten-modules
+- npm i -g tslide to view the slides
