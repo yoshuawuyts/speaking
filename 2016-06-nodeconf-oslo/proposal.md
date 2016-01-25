@@ -10,17 +10,17 @@ reliably architect software that scales.
 -----------------
 ## A little bit more
 As a contractor most projects I've encountered were built as monoliths, taking
-great effort to refactor and unwrap into different services. I found there
-usually is a great divide between the initial (JS) application and the system
-that requires to be run on a cluster, and as such would like to give a talk on
-how to prevent running into (critical) scaling issues from the start of a
-project.
+great effort to refactor and unwrap into different services. I found there is
+usually a great divide between the initial (JS) application and the system
+that must be run on a cluster. Based on my experience I would like to give a
+talk on how, from the start of a project, scaling issues like this can be
+avoided.
 
 In this talk I'll show how the nanomsg POSIX compliant sockets can be
 integrated into Node.js for both in-process and (networked) inter-process
-communication. At the end of the talk the audience should have a good feeling
-for the ideas underlying nanomsg, an overview of staple architecture patterns
-and the right resources to further investigate further.
+communication. At the end of the talk the audience should have a good
+understanding of the ideas underlying nanomsg, an overview of staple
+architecture patterns and the right resources to further investigate further.
 
 ## About
 I'm a freelance software engineer who's been an active member of the Node.js
