@@ -24,7 +24,7 @@
 - why something else
 - concepts
 - components
-- demos
+- stuff it doesn't do
 
 ---
 ## State of the stack
@@ -157,3 +157,62 @@ Controllers
 - sheet-router
 - xtend
 - browserify
+
+---
+## Components
+[ demo ]
+
+---
+## Components
+Views
+- inline styles (like css)
+- inline templates (like html)
+- bindings to the controllers
+
+---
+## Components
+```js
+function errMain (params, app, state) {
+  const prefix = sf`
+    span { color: red }
+  `
+
+  return hx`
+    <button onclick=${app.send({ type: 'increment' })}>
+      +${state.mod}
+    </button>
+  `
+}
+```
+
+---
+## Components
+Model
+- virtual-app
+- xtend
+
+---
+## Components
+
+---
+## Stuff it doesn't do
+- no animations
+- no config-to-code
+- not newcomer friendly
+- not popular (yet?)
+
+---
+## Recap
+- there is a parallel universe
+- build your own is cool
+- unix is hard tho
+- it's all about tradeoffs
+
+---
+## h('thank.you', '!')
+- twitter.com/yoshuawuyts
+- github.com/yoshuawuyts
+
+Slides available on
+- https://github.com/yoshuawuyts/talks/2015-02-2016-02-melbjs
+- npm i -g tslide to view the slides
