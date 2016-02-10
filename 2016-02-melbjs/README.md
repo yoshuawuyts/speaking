@@ -126,8 +126,8 @@ Model
 ---
 ## Concepts
 Controllers
-- no state at all
-- modifies state
+- stateless
+- jus' modifies state
 - responds to events from view
 - no state!
 
@@ -160,7 +160,7 @@ Controllers
 
 ---
 ## Components
-[ demo ]
+[ ~~ demo ~~ ]
 
 ---
 ## Components
@@ -187,12 +187,27 @@ function errMain (params, app, state) {
 
 ---
 ## Components
+[ note to self: show sheetify v4 README ]
+
+---
+## Components
 Model
 - virtual-app
 - xtend
 
 ---
 ## Components
+Model
+```js
+function modifyState (action, state) {
+  if (action.type === 'increment') {
+    return xtend(state, { count: state.count + 1 })
+  }
+  if (action.type === 'decrement') {
+    return xtend(state, { count: state.count - 1 })
+  }
+}
+```
 
 ---
 ## Stuff it doesn't do
