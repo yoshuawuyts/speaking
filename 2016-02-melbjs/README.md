@@ -44,7 +44,6 @@
 - integration
 - opinions
 
-
 ---
 ## Concepts
 MVC
@@ -149,3 +148,12 @@ Controllers
 │       │                 │      │
 └───────┘                 └──────┘
 ```
+
+---
+## Components
+- virtual-app
+- hyperx
+- sheetify
+- sheet-router
+- xtend
+- browserify
