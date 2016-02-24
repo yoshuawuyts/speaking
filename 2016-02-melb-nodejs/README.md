@@ -29,7 +29,7 @@
 
 ---
 ## Ye olde monolith
-```
+```txt
   ┌─────────────────────────────┐
   │           Client            │
   └────────┬────────────▲───────┘
@@ -62,7 +62,7 @@
 
 ---
 ## Shiny monolith
-```
+```txt
   ┌───────────────────────────────┐
   │            Client             │
   └────────┬────────────▲─────────┘
@@ -171,6 +171,24 @@ All relationships ever:
 
 ---
 ## Scalability patterns
+Sync pub-sub
+```txt
+ ┌───────────┐
+ │ Publisher │
+ ├─────┬─────┤
+ │ REP │ PUB │
+ └▲──┬─┴──┬──┘
+  1  │    │
+  │  2    3
+ ┌┴──▼─┬──▼──┐
+ │ REQ │ SUB │
+ ├─────┴─────┤
+ │Subscriber │
+ └───────────┘
+```
+
+---
+## Scalability patterns
 
 ---
 ## message Thank { required string You = 1; }
@@ -182,5 +200,5 @@ All relationships ever:
 - https://github.com/nickdesaulniers/node-nanomsg
 
 Slides available on
-- https://github.com/yoshuawuyts/talks/2015-02-2016-02-melbjs
+- https://github.com/yoshuawuyts/talks/2016-02-melb-nodejs
 - npm i -g tslide to view the slides
