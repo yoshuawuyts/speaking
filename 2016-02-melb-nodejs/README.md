@@ -24,8 +24,8 @@
 - shiny monolith architecture
 - protobufs
 - nanomsg
-- scalability patterns
-- cute lil hacks
+- scalability patterns-ish
+- demo time
 
 ---
 ## Ye olde monolith
@@ -127,6 +127,7 @@ const decoder = messages.Company.decode()
 - TCP / Unix socket / Websocket
 - complexity in patterns, not code
 - C lib - bindings to any lang
+- ~10Mb/s throughput for Node
 
 ---
 ## Nanomsg
@@ -189,6 +190,12 @@ Sync pub-sub
 
 ---
 ## Scalability patterns
+Required reading
+- http://zguide.zeromq.org/page:all
+
+---
+## Demo time
+[ demo time ]
 
 ---
 ## message Thank { required string You = 1; }
