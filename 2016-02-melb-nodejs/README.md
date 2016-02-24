@@ -24,7 +24,7 @@
 - shiny monolith architecture
 - protobufs
 - nanomsg
-- scalability patterns-ish
+- scalability patterns
 - demo time
 
 ---
