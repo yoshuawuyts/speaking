@@ -55,13 +55,6 @@
 
 ---
 ## Shiny monolith
-- Informal contracts are the worst
-- JSON is pretty bad for RPC
-- Good design saves time refactoring
-- Ship things, test, refactor
-
----
-## Shiny monolith
 ```txt
   ┌───────────────────────────────┐
   │            Client             │
@@ -179,8 +172,7 @@ Sync pub-sub
  ├─────┬─────┤
  │ REP │ PUB │
  └▲──┬─┴──┬──┘
-  1  │    │
-  │  2    3
+  1  2    3
  ┌┴──▼─┬──▼──┐
  │ REQ │ SUB │
  ├─────┴─────┤
@@ -190,7 +182,7 @@ Sync pub-sub
 
 ---
 ## Scalability patterns
-Required reading
+Required reading(!)
 - http://zguide.zeromq.org/page:all
 
 ---
@@ -202,10 +194,10 @@ Required reading
 - twitter.com/yoshuawuyts
 - github.com/yoshuawuyts
 
-- http://zguide.zeromq.org/page:all
-- https://github.com/mafintosh/pbs
-- https://github.com/nickdesaulniers/node-nanomsg
+- zguide.zeromq.org/page:all
+- github.com/mafintosh/pbs
+- github.com/nickdesaulniers/node-nanomsg
 
 Slides available on
-- https://github.com/yoshuawuyts/talks/2016-02-melb-nodejs
+- github.com/yoshuawuyts/talks/2016-02-melb-nodejs
 - npm i -g tslide to view the slides

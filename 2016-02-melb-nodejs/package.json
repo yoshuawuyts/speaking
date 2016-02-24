@@ -4,7 +4,8 @@
   "description": "",
   "main": "01_http.js",
   "scripts": {
-    "start": "node $1* | garnish"
+    "start": "node 01_http | garnish",
+    "worker": "node 02_worker"
   },
   "author": "Yoshua Wuyts <i@yoshuawuyts.com>",
   "license": "MIT",
