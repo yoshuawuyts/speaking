@@ -154,14 +154,16 @@ All relationships ever:
 - one to one
 - many to one
 - one to many
+- many to many
 
 ---
 ## Scalability patterns
 - pair (1:1)
 - req-res (n:1)
 - pub-sub (1:n)
-- pipeline (1:n:1)
+- pipeline, push-pull (1:n)
 - bus (n:n)
+- surveyor-respondent (1:n)
 
 ---
 ## Scalability patterns
