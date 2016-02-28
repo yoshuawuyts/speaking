@@ -57,6 +57,31 @@ const tree = hx`
 ```
 
 ---
+## Lil overview
+```sh
+$ browserify -t sheetify/transform index.js > bundle.js
+```
+
+---
+## Lil overview
+```css
+._60ed23e .h1 { text-align: center; }
+```
+```html
+<section class="._60ed23e">
+  <h1>My beautiful, centered title</h1>
+</section>
+```
+
+---
+## Lil overview
+```sh
+$ browserify index.js \
+  -t [ sheetify/transform -o bundle.css ] \
+  > bundle.js
+```
+
+---
 ## Demos
 - Q: How do I style host elements?
 - A: [demo 1]
@@ -92,7 +117,7 @@ const tree = hx`
 - slightly different philosophy
 
 ---
-## Sheetify vs jcss
+## Sheetify vs JCSS
 - both inline
 - objects vs CSS
 - webpack-focused
