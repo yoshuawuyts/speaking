@@ -24,30 +24,25 @@ Today in practical sheetify:
 - design goals
 - lil overview
 - problem showcase
-- sheetify vs x
-
----
-## Design goals
-What is CSS even?
-- dedicated language
-- set properties on nodes
-- declarative
-- "system" in ECS
+- sheetify vs other software
 
 ---
 ## Design goals
 - leverage npm for stylesheets
 - don't break the CSS spec
 - simplify OOCSS
-- extend through plugins
-- flexible but not complex
-- a bit of overloading is OK
+- flexibility through plugins
 
 ---
 ## Lil overview
 ```js
+const hx = require('hyperx')(require('virtual-dom').h)
+const sf = require('sheetify')
+
 const prefix = sf`
-  h1 { text-align: center; }
+  h1 {
+    text-align: center;
+  }
 `
 const tree = hx`
   <section className=${prefix}>
@@ -97,11 +92,6 @@ $ browserify index.js \
 - A: [demo 3]
 
 ---
-## Demos
-- Q: How can I publish default styles to npm?
-- A: [demo 4]
-
----
 ## Sheetify vs SASS
 - whole different language
 - compiled output is quite big
@@ -122,6 +112,15 @@ $ browserify index.js \
 - objects vs CSS
 - webpack-focused
 - sets properties on elements
+
+---
+## Future
+e.g. next 2 weeks~ish
+- incremental rebuilds
+- async plugin support
+- variable passing
+- debug mode?
+- bugfixes!
 
 ---
 ## Recap
