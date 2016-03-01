@@ -107,7 +107,7 @@ $ browserify index.js \
 - slightly different philosophy
 
 ---
-## Sheetify vs JCSS
+## Sheetify vs React styles
 - both inline
 - objects vs CSS
 - webpack-focused
