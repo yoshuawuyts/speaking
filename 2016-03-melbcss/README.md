@@ -99,7 +99,7 @@ $ browserify index.js \
 - no npm support
 
 ---
-## Sheetify vs css-modules
+## Sheetify vs CSS-Modules
 - external files vs inline
 - both use namespaces
 - both based on PostCSS
@@ -107,15 +107,16 @@ $ browserify index.js \
 - slightly different philosophy
 
 ---
-## Sheetify vs React styles
+## Sheetify vs React Styles
 - both inline
 - objects vs CSS
-- webpack-focused
 - sets properties on elements
+- camelcasing breaks the spec
+- kinda locked in hey
 
 ---
 ## Future
-e.g. next 2 weeks~ish
+e.g. next 2 weeksish
 - incremental rebuilds
 - async plugin support
 - variable passing

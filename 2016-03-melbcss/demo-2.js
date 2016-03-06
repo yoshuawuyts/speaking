@@ -4,8 +4,8 @@ const sf = require('sheetify')
 
 const hx = hyperx(vdom.h)
 
-var noop1 = sf('css-wipe/dest/bundle')
-var noop2 = sf('css-type-base')
+sf('css-wipe')
+sf('css-type-base')
 
 const prefix = sf`
   :host {

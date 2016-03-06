@@ -10,7 +10,11 @@
   "license": "ISC",
   "browserify": {
     "transform": [
-      "sheetify/transform"
+      [
+        "sheetify/transform", {
+          "use": ["sheetify-cssnext"]
+        }
+      ]
     ]
   },
   "dependencies": {
