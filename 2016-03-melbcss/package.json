@@ -11,10 +11,12 @@
   "browserify": {
     "transform": [
       [
-        "sheetify/transform", {
-          "use": ["sheetify-cssnext"]
+        "sheetify/transform",
+        {
+          "use": [ ["sheetify-cssnext", { "sourcemap": false }] ]
         }
-      ]
+      ],
+      "hyperxify"
     ]
   },
   "dependencies": {
