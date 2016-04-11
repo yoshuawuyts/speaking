@@ -15,9 +15,9 @@ Slides, proposals and more for talks I give.
 [16-02] accepted melb-nodejs      a thousand tiny messages
 [16-02] accepted melbjs           virtual-what?
 [16-03] accepted melbcss          modular stylesheets with sheetify
-[16-05] proposed nodeconf-london  pull-stream: the little module that could
-[16-05] proposed nodeconf-london  the anatomy of a node server
-[16-06] proposed nodeconf-oslo    tiny messages for big architectures
+[16-05] rejected nodeconf-london  pull-stream: the little module that could
+[16-05] rejected nodeconf-london  the anatomy of a node server
+[16-06] pending  nodeconf-oslo    tiny messages for big architectures
 ```
 
 ## Recordings
@@ -26,6 +26,8 @@ Slides, proposals and more for talks I give.
 
 ## See Also
 - [mafintosh/slides](https://github.com/mafintosh/slides)
+- [watson/slides](https://github.com/watson/talks)
+- [watson/hacker-conferences](https://github.com/watson/hacker-conferences)
 
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
