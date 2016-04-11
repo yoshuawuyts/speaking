@@ -77,26 +77,24 @@ the road of frameworks.
 Browser Day
 
 ### Additional Talk Information
-In the last decade frameworks started at jQuery, progressed through Backbone
-and Angular before arriving at React. On each iteration, everything has been
-rebuilt and existing logic has generally been thrown out with the bath water.
-It's not odd that with lacking stable foundations, people [express being
-fatigued][jsf].
+In the last decade framework popularity started at jQuery, progressed through
+Backbone and Angular and arrived at React. Every iteration, everything has
+been rebuilt and existing logic has been thrown out with the bath water. It's
+not odd some people [express being fatigued][jsf].
 
 Wouldn't it be nice if change was instigated not because we're pressured into
-it, but because we choose to? That is exactly what [bel][bae],
-[yo-yo][yo] and [morphdom][md] propose we do - treating the DOM as the source
-of truth, and managing the DOM directly, while not forgetting the patterns and
-best practices we've gathered over the years.
+it, but because we choose to? That is exactly what [bel][bae], [yo-yo][yo] and
+[morphdom][md] propose we do - by treating DOM nodes as the interface, we can
+finally liberate ourselves from frameworks and start creating the components we
+want, using the very best practices we've gathered over the years.
 
 I've been an early adopter of React, have a reasonable number of [virtual-dom
-components][avd], have been involved with the precursors of `yo-yo` and `bel`
+components][avd], have been involved with the precursors of `yo-yo`
 ([base-element][be], [vel][vel]) and have [given talks][vw] about `virtual-dom`
 in the past.
 
 To my knowledge no prior talks about `yo-yo` and `bel` have been given at
-conferences before. I'd like people to question existing practices, and provide
-them with a bit of faith that we're finally closing in on ecosystem stability.
+conferences before.
 
 [avd]: https://github.com/sethvincent/awesome-virtual-dom
 [vw]: https://github.com/yoshuawuyts/talks/blob/master/2016-02-melbjs/README.md
@@ -106,3 +104,4 @@ them with a bit of faith that we're finally closing in on ecosystem stability.
 [md]: https://github.com/patrick-steele-idem/morphdom
 [yo]: https://github.com/maxogden/yo-yo
 [jsf]: https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4
+[hx]: https://github.com/substack/hyperx

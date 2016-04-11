@@ -21,7 +21,6 @@ Slides, proposals and more for talks I give.
 [16-08] pending   cascadiafest     pull-stream: the little module that could
 [16-08] pending   cascadiafest     the anatomy of a node server
 [16-08] pending   cascadiafest     virtual no more
-[16-08] pending   cascadiafest     modular stylesheets with sheetify
 ```
 
 ## Recordings
