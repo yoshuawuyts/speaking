@@ -15,6 +15,7 @@ Slides, proposals and more for talks I give.
 [16-02] accepted  melb-nodejs      a thousand tiny messages
 [16-02] accepted  melbjs           virtual-what?
 [16-03] accepted  melbcss          modular stylesheets with sheetify
+[16-04] accepted  pivotal-labs     virtual no more
 [16-05] denied    nodeconf-london  pull-stream: the little module that could
 [16-05] denied    nodeconf-london  the anatomy of a node server
 [16-06] accepted  nodeconf-oslo    tiny messages for big architectures
