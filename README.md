@@ -11,7 +11,7 @@ Slides, proposals and more for talks I give.
 [2015-10] accepted  sydjs            Node.js in 5
 [2015-11] accepted  campjs-vi        11 rad packages
 [2015-11] accepted  syd-nodeninjas   logging and error handling in Node.js
-[2016-11] accepted  sydjs            pipe, emit, stream, listen
+[2015-11] accepted  sydjs            pipe, emit, stream, listen
 [2016-02] accepted  melb-nodejs      a thousand tiny messages
 [2016-02] accepted  melbjs           virtual-what?
 [2016-03] accepted  melbcss          modular stylesheets with sheetify
