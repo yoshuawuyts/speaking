@@ -19,9 +19,9 @@ Slides, proposals and more for talks I give.
 [16-05] denied    nodeconf-london  pull-stream: the little module that could
 [16-05] denied    nodeconf-london  the anatomy of a node server
 [16-06] accepted  nodeconf-oslo    tiny messages for big architectures
-[16-08] pending   cascadiafest     pull-stream: the little module that could
-[16-08] pending   cascadiafest     the anatomy of a node server
-[16-08] pending   cascadiafest     virtual no more
+[16-08] denied    cascadiafest     pull-stream: the little module that could
+[16-08] accepted  cascadiafest     the anatomy of a node server
+[16-08] denied    cascadiafest     virtual no more
 ```
 
 ## Recordings
