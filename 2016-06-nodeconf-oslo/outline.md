@@ -47,3 +47,4 @@ providing a system that can be understood on a macro scale.
 - patterns
 - protocols
 - and how to apply this stuff for production
+- ITERATIVE DEVELOPMENT
