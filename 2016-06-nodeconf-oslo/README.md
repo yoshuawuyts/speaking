@@ -17,64 +17,72 @@
 - node
 - consulting
 - grumpy old man
+- mad engineering
 
 ---
 ## A thousand tiny messages
-- Let's chat about developing in general
-- , about servers
-- , about protocols
-- , patterns
-- and some key takeaways for production
+- Let's chat about big systems
+- , what makes them complex
+- , and how to make them un-complex
 
 ---
-## Server chat
-- Centralized distributed systems
-- Better right-now tech
+## A thousand tiny messages
+So what's a big system?
+- several people working together
+- on a bunch of processes that continously
+  exchange data
+- that may or may not live on the same machine
 
 ---
-## Server chat
-- But first... story time!
-- (that one airplane story)
+## A thousand tiny messages
+Macro scale understanding:
+- be aware of all moving parts of a system
+- know what they do
+- and know how they connect to each other
 
 ---
-## Server chat
-So what makes our systems inflexible?
-- languages themselves
-- implicit contracts
-- unknown effects
-- unknown causality of effects
-- complex depency graph (code, not packages)
+## A thousand tiny messages
+Black box programming:
+- the interface of a program is known
+- implementation details don't leak
+- like the good packages in Node
+- which reduces cognitive overhead
 
 ---
-## Server chat
-Tradeoffs
-- iteration vs robustness
-- iteration vs performance
-- iteration vs clarity
-
----
-## Server chat
-```txt
-┌─────────────────────────┐
-│ Reverse engineering is  │
-│  the root of all time   │
-│       consumption       │
-└─────────────────────────┘
-```
+## A thousand tiny messages
+Homogenic interfaces:
+- the interface is the same regardless of situation
+- like plan9 files everywhere
+- sometimes less than ideal fit
+- but introduces shared terminology
+- and moves programs closer to lego
 
 ---
 ## Server chat
 ```txt
-┌───────────────────────────────┐
-│ Everyone knows that debugging │
-│ is twice as hard as writing a │
-│  program in the first place.  │
-│ So if you're as clever as you │
-│ can be when you write it, how │
-│    will you ever debug it?    │
-└───────────────────────────────┘
-              - Brian Kernighan
+┌──────────────────────────┐
+│  Reverse engineering is  │
+│   the root of all dev    │
+│     time consumption     │
+└──────────────────────────┘
 ```
+(More bold statements after the break)
+
+---
+## Server chat
+```txt
+┌─────────────────────────────────┐
+│  Everyone knows that debugging  │
+│  is twice as hard as writing a  │
+│   program in the first place.   │
+│                                 │
+│  So if you're as clever as you  │
+│  can be when you write it, how  │
+│     will you ever debug it?     │
+└─────────────────────────────────┘
+                  - Brian Kernighan
+```
+(We're done with bold statements now)
 
 ---
 ## Server chat
@@ -97,55 +105,6 @@ Which basically all boils down to:
 Black box programming:
 - only the interface of a system is known
 - consumers don't care about the implementation
-
----
-## Ye olde monolith
-```txt
-  ┌─────────────────────────────┐
-  │           Client            │
-  └────────┬────────────▲───────┘
-─ ─ ─ ─ ─ ─│─ ─ ─ ─ ─ ─ ┼ ─ ─ ─ ─ ─
-  ┌────────▼────────────┴───────┐
-  │           JS blob           │
-  └────────┬────────────▲───────┘
-           │            │
-  ┌────────▼────────────┴───────┐
-  │             DB              │
-  └─────────────────────────────┘
-```
-
----
-## Ye olde monolith
-- works pretty well for small things
-- fast to build
-- implicit internal interfaces
-- integration tests are easy
-- testing logic in isolation is hard
-- pretty rough to maintain (in JS)
-- pretty rough to split up (in JS)
-
----
-## Shiny monolith
-```txt
-  ┌───────────────────────────────┐
-  │            Client             │
-  └────────┬────────────▲─────────┘
-─ ─ ─ ─ ─ ─│─ ─ ─ ─ ─ ─ ┼ ─ ─ ─ ─ ─ ─
-  ┌────────▼────────────┴─────────┐
-  │          Public API           │
-  └──┬───▲─────┬────▲──────┬───▲──┘
-     │   │     │    │      │   │
-  ┌──▼───┴──┐┌─▼────┴──┐┌──▼───┴──┐
-  │ Service ││ Service ││ Service │
-  └─────────┘└─────────┘└─────────┘
-```
-
----
-## Shiny monolith
-- internal RPC over TCP or Unix sockets
-- statically typed data through protobufs
-- easy to refactor
-- easy to split up
 
 ---
 ## Patterns
