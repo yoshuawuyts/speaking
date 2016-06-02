@@ -19,6 +19,8 @@ providing a system that can be understood on a macro scale.
    programming)
 4. solution is scalability patterns and statically typed SHOW OFF SCALABILITY
    PATTERNS
+5. demo time - RPC using http2 and streaming protocol buffers, message queue
+   using disqueue, perhaps gRPC?
 
 ## Answers
 1. Loosely typed data and inter-system relations don't provide macro scale

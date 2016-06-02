@@ -25,7 +25,7 @@
 - , and how to make them un-complex
 
 ---
-## A thousand tiny messages
+## What makes systems complex?
 So what's a big system?
 - several people working together
 - on a bunch of processes that continously
@@ -33,14 +33,14 @@ So what's a big system?
 - that may or may not live on the same machine
 
 ---
-## A thousand tiny messages
+## What makes systems complex?
 Macro scale understanding:
 - be aware of all moving parts of a system
 - know what they do
 - and know how they connect to each other
 
 ---
-## A thousand tiny messages
+## What makes systems complex?
 Black box programming:
 - the interface of a program is known
 - implementation details don't leak
@@ -48,7 +48,7 @@ Black box programming:
 - which reduces cognitive overhead
 
 ---
-## A thousand tiny messages
+## What makes systems complex?
 Homogenic interfaces:
 - the interface is the same regardless of situation
 - like plan9 files everywhere
@@ -57,25 +57,14 @@ Homogenic interfaces:
 - and moves programs closer to lego
 
 ---
-## A thousand tiny messages
+## What makes systems complex?
 - services are getting smaller
 - team size / composition morphs
 - everything is written in dynamic langs
 - technical debt for the sake of progress
 
 ---
-## A thousand tiny messages
-```txt
-┌──────────────────────────┐
-│  Reverse engineering is  │
-│   the root of all dev    │
-│     time consumption     │
-└──────────────────────────┘
-```
-(More bold statements after the break)
-
----
-## A thousand tiny messages
+## What makes systems complex?
 ```txt
 ┌─────────────────────────────────┐
 │  Everyone knows that debugging  │
@@ -90,11 +79,81 @@ Homogenic interfaces:
 ```
 
 ---
-## Patterns
-So how do we connect our systems?
+## What makes systems complex?
+```txt
+┌──────────────────────────┐
+│  Reverse engineering is  │
+│   the root of all dev    │
+│     time consumption     │
+└──────────────────────────┘
+```
+
+---
+## What is making systems complex?
+Ye olde monolith:
+```txt
+  ┌─────────────────────────────┐
+  │           Client            │
+  └────────┬────────────▲───────┘
+─ ─ ─ ─ ─ ─│─ ─ ─ ─ ─ ─ ┼ ─ ─ ─ ─ ─
+  ┌────────▼────────────┴───────┐
+  │           JS blob           │
+  └────────┬────────────▲───────┘
+           │            │
+  ┌────────▼────────────┴───────┐
+  │             DB              │
+  └─────────────────────────────┘
+```
+
+---
+## What is making systems complex?
+Old monolith architecture:
+- fast to build
+- implicit internal interfaces
+- testing logic in isolation is hard
+- rough to split up and maintain
+
+---
+## Uncomplexify
+Shiny monolith:
+```txt
+  ┌───────────────────────────────┐
+  │            Client             │
+  └────────┬────────────▲─────────┘
+─ ─ ─ ─ ─ ─│─ ─ ─ ─ ─ ─ ┼ ─ ─ ─ ─ ─ ─
+  ┌────────▼────────────┴─────────┐
+  │          Public API           │
+  └──┬───▲─────┬────▲──────┬───▲──┘
+     │   │     │    │      │   │
+  ┌──▼───┴──┐┌─▼────┴──┐┌──▼───┴──┐
+  │ Service ││ Service ││ Service │
+  └─────────┘└─────────┘└─────────┘
+```
+
+---
+## Uncomplexify
+Shiny monolith:
+- internal RPC over TCP
+- statically typed data through protobufs
+- easy to refactor
+- easy to split up
+
+---
+## Uncomplexify
+So how do we combat system complexity?
+- define common patterns for connecting systems
+- statically typed data between systems
+- RPC over TCP\*
+
+---
+## Uncomplexify
+So what are the patterns to connect our systems?
 - RPC (1:1)
 - message queue (1:n)
 - pubsub (1:n)
+
+---
+## Uncomplexify
 
 ---
 ## Protocols
