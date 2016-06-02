@@ -16,7 +16,6 @@
 - unix
 - node
 - consulting
-- grumpy old man
 - mad engineering
 
 ---
@@ -58,7 +57,14 @@ Homogenic interfaces:
 - and moves programs closer to lego
 
 ---
-## Server chat
+## A thousand tiny messages
+- services are getting smaller
+- team size / composition morphs
+- everything is written in dynamic langs
+- technical debt for the sake of progress
+
+---
+## A thousand tiny messages
 ```txt
 ┌──────────────────────────┐
 │  Reverse engineering is  │
@@ -69,7 +75,7 @@ Homogenic interfaces:
 (More bold statements after the break)
 
 ---
-## Server chat
+## A thousand tiny messages
 ```txt
 ┌─────────────────────────────────┐
 │  Everyone knows that debugging  │
@@ -82,29 +88,6 @@ Homogenic interfaces:
 └─────────────────────────────────┘
                   - Brian Kernighan
 ```
-(We're done with bold statements now)
-
----
-## Server chat
-Which basically all boils down to:
-- How are developers allocating their time?
-- And how can we thus optimize for value?
-
----
-## Protocols
-```txt
-┌────────────────────────────────┐
-│ Unless a contract between two  │
-│  systems is made explicit, it  │
-│        is unenforcable         │
-└────────────────────────────────┘
-```
-
----
-## Protocols
-Black box programming:
-- only the interface of a system is known
-- consumers don't care about the implementation
 
 ---
 ## Patterns
