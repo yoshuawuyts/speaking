@@ -154,9 +154,92 @@ So what are the patterns to connect our systems?
 
 ---
 ## Uncomplexify
+Request - Reply (n:1)
+```txt
+    ┌──────────┐
+    │  Client  │
+    ├──────────┤
+    │   REQ    │
+    └──┬────▲──┘
+       │    │
+ Hello │    │ World
+       │    │
+    ┌──▼────┴──┐
+    │   REP    │
+    ├──────────┤
+    │  Server  │
+    └──────────┘
+```
 
 ---
-## Protocols
+## Uncomplexify
+Push - Pull (1:n)
+```txt
+                ┌──────────┐
+                │   Push   │
+                └──────────┘
+                    Tasks
+       ┌──────────────┼──────────────┐
+       │              │              │
+ ┌─────▼────┐   ┌─────▼────┐   ┌─────▼────┐
+ │   PULL   │   │   PULL   │   │   PULL   │
+ └──────────┘   └──────────┘   └──────────┘
+```
+
+---
+## Uncomplexify
+Push - Pull (1:n:1)
+```txt
+                ┌──────────┐
+                │   Push   │
+                └──────────┘
+                    Tasks
+       ┌──────────────┼──────────────┐
+       │              │              │
+ ┌─────▼────┐   ┌─────▼────┐   ┌─────▼────┐
+ │   PULL   │   │   PULL   │   │   PULL   │
+ ├──────────┤   ├──────────┤   ├──────────┤
+ │   PUSH   │   │   PUSH   │   │   PUSH   │
+ └──────────┘   └──────────┘   └──────────┘
+       │              │               │
+       └──────────────┼───────────────┘
+                   Results
+                ┌─────▼────┐
+                │   PULL   │
+                └──────────┘
+```
+
+---
+## Uncomplexify
+Pubblish - Subscribe (1:n)
+```txt
+                ┌──────────┐
+                │    PUB   │
+                └──────────┘
+                      │
+       ┌──────────────┼──────────────┐
+       │              │              │
+ ┌─────▼────┐   ┌─────▼────┐   ┌─────▼────┐
+ │   SUB    │   │   SUB    │   │   SUB    │
+ └──────────┘   └──────────┘   └──────────┘
+```
+
+---
+## Uncomplexify
+But there's more, less used ones too
+- req-res (n:1)
+- pub-sub (1:n)
+- push-pull (1:n)
+- pair (1:1)
+- bus (n:n)
+- surveyor-respondent (1:n)
+
+---
+## Uncomplexify
+So what about protocols?
+
+---
+## Uncomplexify
 JSON over HTTP
 - human-readable
 - native to JS
@@ -166,24 +249,24 @@ JSON over HTTP
 - non-versioned
 
 ---
-## Protocols
+## Uncomplexify
 Protobuf (and derivatives) over HTTP2
 - binary
-- C++
-- lol, debugging
-- static(!)
+- C / C++
+- hah, debugging
+- statically typed(!)
 - oh yeah it's small alright
 - versioned(!)
 
 ---
-## Protocols
+## Uncomplexify
 ```protobuf
 enum FOO {
   BAR = 1;
 }
 
 message Test {
-  required float num  = 1;
+  required float num = 1;
   required string payload = 2;
 }
 
@@ -193,7 +276,27 @@ message AnotherOne {
 ```
 
 ---
-## Production
+## Uncomplexify
+- FOO is an enumeration of possible values
+- AnotherOne holds many FOO
+- Test has a num and payload
+
+---
+## Uncomplexify
+Upgrading Protobuf goes like:
+```protobuf
+enum FOO {
+  BAR = 1;
+}
+```
+```protobuf
+enum FOO {
+  BEEP = 2;
+}
+```
+
+---
+## Uncomplexify
 RPC Server
 ```js
 const http = require('http')
@@ -202,17 +305,14 @@ const pbs = require('pbs')
 const fs = require('fs')
 
 const schema = pbs(fs.readFileSync('./schema.proto'))
-const decoder = schema.Test.decoder((msg) => console.log(`message: ${msg}`))
-
 http.createServer(function (req, res) {
-  pump(req, decoder, function (err) {
-    res.end()
-  })
+  const decoder = schema.Test.decoder(console.log)
+  pump(req, decoder, () => res.end())
 }).listen(8080)
 ```
 
 ---
-## Production
+## Uncomplexify
 RPC Client
 ```js
 const http = require('http')
@@ -224,14 +324,14 @@ const schema = pbs(fs.readFileSync('./schema.proto'))
 const encoder = schema.Test.encoder()
 
 const msg = encoder({ num: 2, payload: 'hey there' })
-const req = http.request('http://localhost:8080', function (err, res) {
+const req = http.request('http://localhost:8080', (err, res) => {
   console.log(`statusCode: ${res.statusCode}`)
 })
 pump(msg, req)
 ```
 
 ---
-## Protocols
+## Uncomplexify
 gRPC over HTTP2
 - like protobuf over HTTP2
 - custom status codes
@@ -240,13 +340,34 @@ gRPC over HTTP2
 - it's what Google does™
 
 ---
-## Production
-```txt
-┌───────────────────────────┐
-│ Use git AND semantically  │
-│     version schemas       │
-└───────────────────────────┘
-```
+## Uncomplexify
+Drawbacks of GRPC
+- constraints!
+- RPC not protocols
+- Node RPC interface / docs are not pleasant
+- non-http status code system
+- (but it's still kinda cool hey)
+
+---
+## Uncomplexify
+Also:
+- json-schema is pretty good for JSON
+- There are no silver bullets
+
+---
+## Uncomplexify
+So how do we deploy this puppy?
+- shared repo just for schemas
+- `$ npm install -S <schema-name>`
+- sprinkle semver on top
+- and greenkeeper! (<3)
+
+---
+## Uncomplexify
+Summary:
+- well-defined network topologies
+- static data structures
+- bounded systems
 
 ---
 ## message Thank { required string You = 1; }
@@ -255,6 +376,8 @@ gRPC over HTTP2
 
 - zguide.zeromq.org/page:all
 - github.com/mafintosh/pbs
+
+Workshop on Sunday!
 
 Slides available on
 - github.com/yoshuawuyts/talks/2016-06-nodeconf-oslo
