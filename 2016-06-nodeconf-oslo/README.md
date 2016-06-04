@@ -1,8 +1,8 @@
 ```
 ┌─────────────────────────┐
 │                         │██
-│    A thousand tiny      │██
-│    messages             │██
+│    Tiny messages for    │██
+│    big architectures    │██
 │                         │██
 │    Yoshua Wuyts         │██
 │    2016-06-05           │██
@@ -19,7 +19,7 @@
 - mad engineering
 
 ---
-## A thousand tiny messages
+## Tiny messages for big architectures
 - Let's chat about big systems
 - , what makes them complex
 - , and how to make them un-complex
@@ -148,9 +148,9 @@ So how do we combat system complexity?
 ---
 ## Uncomplexify
 So what are the patterns to connect our systems?
-- RPC (1:1)
-- message queue (1:n)
-- pubsub (1:n)
+- RPC (n:1)
+- Message queue (1:n)
+- PubSub (1:n)
 
 ---
 ## Uncomplexify
@@ -350,6 +350,10 @@ Drawbacks of GRPC
 
 ---
 ## Uncomplexify
+[ demo time? ]
+
+---
+## Uncomplexify
 Also:
 - json-schema is pretty good for JSON
 - There are no silver bullets
@@ -376,6 +380,7 @@ Summary:
 
 - zguide.zeromq.org/page:all
 - github.com/mafintosh/pbs
+- github.com/mafintosh/protocol-buffers
 
 Workshop on Sunday!
 

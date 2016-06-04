@@ -1,0 +1,12 @@
+enum FOO {
+  BAR = 1;
+}
+
+message Test {
+  required float num = 1;
+  required string payload = 2;
+}
+
+message AnotherOne {
+  repeated FOO list = 1;
+}
