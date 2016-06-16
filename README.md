@@ -28,6 +28,7 @@ Slides, proposals and more for talks I give.
 ## Recordings
 - __\[15-11\] sydjs:__ [pipe, emit, stream, listen](https://www.youtube.com/watch?v=QWtG_A0nihQ)
 - __\[16-03\] melbcss:__ [modular stylesheets using sheetify](https://www.youtube.com/watch?v=LKie2UgUJgU)
+- __\[16-06\] nodeconf-oslo:__ [tiny messages for big systems](https://opbeat.com/events/nodeconf-oslo-2016/#tiny-messages-for-big-architectures)
 
 ## See Also
 - [mafintosh/slides](https://github.com/mafintosh/slides)
