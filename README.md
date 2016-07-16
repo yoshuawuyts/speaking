@@ -20,6 +20,7 @@ Slides, proposals and more for talks I give.
 [2016-05] denied    nodeconf-london  the anatomy of a node server
 [2016-05] accepted  nodeschool-tokyo choo: the little framework that could
 [2016-06] accepted  nodeconf-oslo    tiny messages for big architectures
+[2016-07] accepted  react-hamburg    choo choo choo
 [2016-08] denied    cascadiafest     pull-stream: the little module that could
 [2016-08] accepted  cascadiafest     the anatomy of a node server
 [2016-08] denied    cascadiafest     virtual no more
