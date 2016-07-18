@@ -26,7 +26,6 @@ Slides, proposals and more for talks I give.
 [2016-08] denied    cascadiafest     virtual no more
 [2016-10] pending   nodeconf-eu      itty bitty websites
 [2016-11] pending   nodefest-jp      choo choo choo
-[2016-12] pending   jsconf-au        itty bitty websites
 ```
 
 ## Recordings
