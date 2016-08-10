@@ -21,7 +21,7 @@ Slides, proposals and more for talks I give.
 [2016-05] accepted  nodeschool-tokyo choo: the little framework that could
 [2016-06] accepted  nodeconf-oslo    tiny messages for big architectures
 [2016-07] accepted  react-hamburg    choo choo choo
-[2016-07] accepted  remote-js-meetup choo choo choo
+[2016-07] accepted  remote-meetup    choo choo choo
 [2016-08] denied    cascadiafest     pull-stream: the little module that could
 [2016-08] accepted  cascadiafest     the anatomy of a node server
 [2016-08] denied    cascadiafest     virtual no more
@@ -34,7 +34,7 @@ Slides, proposals and more for talks I give.
 - __\[15-11\] sydjs:__ [pipe, emit, stream, listen](https://www.youtube.com/watch?v=QWtG_A0nihQ)
 - __\[16-03\] melbcss:__ [modular stylesheets using sheetify](https://www.youtube.com/watch?v=LKie2UgUJgU)
 - __\[16-06\] nodeconf-oslo:__ [tiny messages for big systems](https://opbeat.com/events/nodeconf-oslo-2016/#tiny-messages-for-big-architectures)
-- __\[16-08\] remove-js-meetup:__ [choo choo choo](https://www.bigmarker.com/remote-meetup/Javascript-Remote-Meetup-Cycle-and-Choo)
+- __\[16-08\] remote-meetup:__ [choo choo choo](https://www.bigmarker.com/remote-meetup/Javascript-Remote-Meetup-Cycle-and-Choo)
 
 ## See Also
 - [mafintosh/slides](https://github.com/mafintosh/slides)
