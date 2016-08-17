@@ -1,4 +1,4 @@
-# Talks
+# Speaking
 Slides, proposals and more for talks I give.
 
 ## Talks
