@@ -25,9 +25,11 @@ Slides, proposals and more for talks I give.
 [2016-08] denied    cascadiafest     pull-stream: the little module that could
 [2016-08] accepted  cascadiafest     the anatomy of a node server
 [2016-08] denied    cascadiafest     virtual no more
+[2016-09] pending   nodejs-berlin    deep dive into browserify
+[2016-09] pending   node-interactive deep dive into browserify
 [2016-10] pending   nodeconf-eu      itty bitty websites
 [2016-11] pending   nodefest-jp      choo choo choo
-[2016-12] pending   jsconf-au        itty bitty websites
+[2016-12] denied    jsconf-au        itty bitty websites
 ```
 
 ## Recordings
