@@ -1,0 +1,16 @@
+{
+  "name": "2016-09-node-interactive-eu",
+  "version": "1.0.0",
+  "description": "``` ┌─────────────────────────┐ │                         │██ │    browserify           │██ │    deep dive            │██ │                         │██ │    Yoshua Wuyts         │██ │    2016-09-16           │██ │                         │██ └─────────────────────────┘██   ███████████████████████████ ```",
+  "main": "01_vanilla.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Yoshua Wuyts <yoshuawuyts@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bel": "^4.4.3",
+    "insert-css": "^1.0.0"
+  }
+}
