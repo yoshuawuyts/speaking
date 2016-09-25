@@ -97,6 +97,10 @@ browserify('./index.js')
 ```
 
 ---
+## Demo time
+[ browserify vanilla demo ]
+
+---
 ## Internals
 - STREAMS EVERYWHERE
 
@@ -170,12 +174,14 @@ Optimizing
 - bundleify
 
 ---
-## Demo?
-
----
 ## Wraps
 All of the above + deployment
 - bankai
+
+---
+## Demo time
+[ bankai demo ]
+(start and build)
 
 ---
 ## Bonus round
@@ -187,7 +193,7 @@ Bankai!
 - as a CLI tool
 
 ---
-## browserify thank.js > you.js
+## $ browserify thank.js > you.js
 - twitter.com/yoshuawuyts
 - github.com/yoshuawuyts
 

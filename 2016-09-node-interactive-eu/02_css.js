@@ -3,12 +3,14 @@ const css = require('sheetify')
 const html = require('bel')
 
 const prefix = css`
-  :host { font-size: 200px; }
+  :host {
+    font-size: 200px;
+  }
 `
 
 const el = html`
   <p class=${prefix}>
-    hello humans
+    hello you
   </p>
 `
 
