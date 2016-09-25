@@ -27,6 +27,7 @@ Slides, proposals and more for talks I give.
 [2016-08] denied    cascadiafest     virtual no more
 [2016-09] accepted  nodejs-berlin    deep dive into browserify
 [2016-09] accepted  node-interactive deep dive into browserify
+[2016-09] accepted  nodeboat         intro to choo
 [2016-10] accepted  nodeconf-eu      towards a faster, smaller web
 [2016-11] accepted  nodefest-jp      choo choo choo
 [2016-12] denied    jsconf-au        itty bitty websites
