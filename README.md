@@ -30,6 +30,7 @@ Slides, proposals and more for talks I give.
 [2016-09] accepted  nodeboat         intro to choo
 [2016-10] accepted  nodeconf-eu      towards a faster, smaller web
 [2016-11] accepted  nodefest-jp      choo choo choo
+[2016-12] pending   holyjs           the frontend resistance
 [2016-12] denied    jsconf-au        itty bitty websites
 ```
 
