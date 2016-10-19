@@ -131,7 +131,7 @@ Basscss  |  14kB |   287 |       347
 - instantly loaded, across the globe
 - "meh" UX but oh wow it's fast
 - also very much evil (!)
-- and that's cool, we might need it
+- and that's cool, we probably need it
 
 ---
 ## The web anno now
@@ -164,11 +164,12 @@ Basscss  |  14kB |   287 |       347
 ┌──────────────────────────────┐
 │    The next billion users    │
 └──────────────────────────────┘
-```
+
 - mostly running Android
 - have decent specs (1GB RAM, quad-core processors)
 - have an evergreen browser and WebView (Android 5+)
 - no reliable internet connection
+```
 - [ source: nolanlawson.com ]
 
 ---
@@ -189,7 +190,7 @@ Basscss  |  14kB |   287 |       347
 ```
 ┌────────────────────────────────┐
 │  What are the pieces of perf   │
-│      on per-resource basis?    │
+│    on a per-resource basis?    │
 └────────────────────────────────┘
 ```
 1. time spent on the network
@@ -240,6 +241,7 @@ Ethernet packet    |    1kb
 First TCP segment  |    4kb
 TCP frame data cap |   60kb
 ```
+- [ source: lots of googling ]
 
 ---
 ```
@@ -293,8 +295,8 @@ TCP frame data cap |   60kb
 └─────────────────────────────┘
 ```
 - complete CSS spec is 20kb
-- brotli is gzip compat and 10% smaller
-- zopfli is new, ok supported and 30% smaller
+- zopfli is DEFLATE compat and ~10% smaller
+- brotli is new, ok supported and ~30% smaller
 - IE8+ targets have viable 5kb frameworks now
 - don't bundle in node core modules
 
