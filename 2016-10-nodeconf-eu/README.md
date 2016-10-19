@@ -44,14 +44,14 @@
 This month in the web (10/2016):
 ```
 Item   | Avg Size | Avg call count
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+──────────────────────────────────
 HTML   |     53kB |       10 calls
 CSS    |     76kB |        7 calls
 JS     |    410kB |       23 calls
 Fonts  |     85kB |        3 calls
 Images |   1650kB |       57 calls
 Total  |   2552kB |      107 calls
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+──────────────────────────────────
 ```
 - [ source: http://httparchive.org/trends.php ]
 
@@ -61,13 +61,13 @@ Total  |   2552kB |      107 calls
 This month in the web (10/2016):
 ```
 Item                | site %
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+────────────────────────────
 HTML hosted on CDN  |    20%
 HTTPS enabled       |    34%
 Using compression   |    75%
 Using custom fonts  |    64%
 Cacheable resources |    47%
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+────────────────────────────
 ```
 - [ source: http://httparchive.org/trends.php ]
 
@@ -88,14 +88,14 @@ This month in the web (10/2016):
 CSS of popular sites per 10/2016:
 ```
 Site     | Size  | Rules | Selectors
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+────────────────────────────────────
 Github   | 647kB |  8153 |      9215
 Twitter  | 643kB |  6990 |      9542
 Medium   | 629kB |  3470 |      4484
 Facebook | 173kB |  2313 |      2875
 Tachyons |  71kB |  1810 |      1994
 Basscss  |  14kB |   287 |       347
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+────────────────────────────────────
 ```
 - [ source: cssstats.com ]
 
@@ -165,23 +165,44 @@ Basscss  |  14kB |   287 |       347
 
 ---
 ## The pieces of perf
+```
+┌────────────────────────────────┐
+│  What are the pieces of perf?  │
+└────────────────────────────────┘
+```
+- setup
+- main loop
 
-- multi MB bundle sizes not uncommon
-- offline support? nah ususually not
-- scripts rev up to a 100
-- UI thread thrashing (GC et al)
+---
+## The pieces of perf
+```
+┌────────────────────────────────┐
+│  What are the pieces of perf?  │
+└────────────────────────────────┘
+```
+- setup
+  - network latency
+  - asset size
+  - caching
+- main loop
+  - operation count
+  - parallelism
+  - task distribution
 
 ---
 ## Why is the web slow?
 ```
-┌──────────────────────┐
-│ Network: Key Metrics │
-└──────────────────────┘
+┌────────────────────────────┐
+│ Setup/network: Key Metrics │
+└────────────────────────────┘
+
+Item               |  Value
+───────────────────────────
+Speed of light     | 3x10^8
+Ethernet packet    |    1kb
+First TCP segment  |    4kb
+TCP frame data cap |   60kb
 ```
-- speed of light is __TODO: GOOGLE THE SPEED OF LIGHT OK__
-- ethernet packet is 1kb
-- first TCP segment is 4kb
-- cap per TCP frame 60kb
 
 ---
 ## Why is the web slow?
