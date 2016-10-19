@@ -7,87 +7,165 @@
 │    Yoshua Wuyts         │██
 │    2016-10-19           │██
 │                         │██
+│   [ epilepsia free ]    │██
+│                         │██
 └─────────────────────────┘██
   ███████████████████████████
 ```
-* epilepsia free
-* afaik no obv. triggers
 
 ---
 ## Hello I'm Yosh
+
 - heaps of npm packages
-- does JS for a living
 - computer opinions
 - 🚂🚃🚃🚃🚃🚃🚃
 - workin on @dat_project
+- not a morning person
 
 ---
 ## So what we talkin 'bout today?
-- Warning ahead: this is a conceptual
+
+- the web anno now
+- the pieces of perf
+- speeding it up
+
+---
+## So what we talkin 'bout today?
+
+- Warning ahead: this is a coneptual
   talk. The conclusions posted are
   subjective and not based on science™.
   It's cool if you take my word for things
   but always do your own research
 
 ---
-## So what we talkin 'bout today?
+## The web anno now
+
+This month in the web (10/2016):
+```
+Item   | Avg Size | Avg call count
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HTML   |     53kB |       10 calls
+CSS    |     76kB |        7 calls
+JS     |    410kB |       23 calls
+Fonts  |     85kB |        3 calls
+Images |   1650kB |       57 calls
+Total  |   2552kB |      107 calls
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+- [ source: http://httparchive.org/trends.php ]
+
+---
+## The web anno now
+
+This month in the web (10/2016):
+```
+Item                | site %
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HTML hosted on CDN  |    20%
+HTTPS enabled       |    34%
+Using compression   |    75%
+Using custom fonts  |    64%
+Cacheable resources |    47%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+- [ source: http://httparchive.org/trends.php ]
+
+---
+## The web anno now
+
+This month in the web (10/2016):
+```
+┌─────────────────────────┐
+│    37 TCP connections   │
+│        on average       │
+└─────────────────────────┘
+```
+
+---
+## The web anno now
+
+CSS of popular sites per 10/2016:
+```
+Site     | Size  | Rules | Selectors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Github   | 647kB |  8153 |      9215
+Twitter  | 643kB |  6990 |      9542
+Medium   | 629kB |  3470 |      4484
+Facebook | 173kB |  2313 |      2875
+Tachyons |  71kB |  1810 |      1994
+Basscss  |  14kB |   287 |       347
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+- [ source: cssstats.com ]
+
+---
+## The web anno now
+```
 ┌─────────────────────────┐
 │                         │
-│     The web is slow,    │
-│     and most* humans    │
-│    don't seem to know   │
-│          why            │
+│  The total size of the  │
+│  CSS language is about  │
+│          20kB           │
 │                         │
 └─────────────────────────┘
-* "most" means like the majority
-  of people I've interacted with.
-  Subjective and YMMV
+```
+- [ Source: Adam Morse - Things I’ve Learned About CSS ]
 
 ---
-## So what we talkin 'bout today?
+## The web anno now
+```
+┌──────────────────┐
+│    Google AMP    │
+└──────────────────┘
+```
+- instantly loaded, across the globe
+- "meh" UX but oh wow it's fast
+- also very much evil (!)
+- and that's cool, we might need it
+
+---
+## The web anno now
+```
 ┌─────────────────────────┐
 │                         │
-│     The web is slow,    │
-│     and most* humans    │
-│    don't seem to know   │
-│                         │
-└─────────────────────────┘
-* "most" means like people with
-  good computers and fast internet,
-  aka a good chunk of devs
-
----
-## So what we talkin' bout today
-- what we mean by "slow"
-- a bunch of useful numbers
-- which things to optimize for
-- cool things you can do to make the web faster
-
----
-## The web is slow, you say?
-┌─────────────────────────┐
-│                         │
-│     Google AMP exists   │
+│    Google AMP exists    │
 │  because Goog couldn't  │
 │    get people to write  │
 │       fast things*      │
 │                         │
 └─────────────────────────┘
-* or so is their justification
-  (paraphrased)
+```
+* free interpretation
 
 ---
-## The web is slow, you say?
-Google AMP is the new standard
-- instantly loaded, across the globe
-- "meh" UX but oh wow it's fast
-- did we mention it's fast?
-- it's fast
-- it's also (arguably) evil
+## The pieces of perf
+```
+┌──────────────────────────────┐
+│    The next billion users    │
+└──────────────────────────────┘
+```
+- mostly running Android
+- have decent specs (1GB RAM, quad-core processors)
+- have an evergreen browser and WebView (Android 5+)
+- no reliable internet connection
+- [ source: nolanlawson.com ]
 
 ---
-## The web is slow, you say?
-Yup, very much so:
+## The pieces of perf
+```
+┌────────────────────────────────┐
+│  What are the pieces of perf?  │
+└────────────────────────────────┘
+```
+1. time spent on the network
+2. time spent booting up
+3. amount of tasks performed
+4. distribution & priotization of tasks
+
+---
+## The pieces of perf
+
 - multi MB bundle sizes not uncommon
 - offline support? nah ususually not
 - scripts rev up to a 100
@@ -95,22 +173,86 @@ Yup, very much so:
 
 ---
 ## Why is the web slow?
-1. time spent on the network
-2. time spent booting up
-3. amount of tasks performed
-4. distribution & priotization of tasks
+```
+┌──────────────────────┐
+│ Network: Key Metrics │
+└──────────────────────┘
+```
+- speed of light is __TODO: GOOGLE THE SPEED OF LIGHT OK__
+- ethernet packet is 1kb
+- first TCP segment is 4kb
+- cap per TCP frame 60kb
 
 ---
-## 
+## Why is the web slow?
+```
+┌─────────────────────────┐
+│    Remember that the    │
+│  speed of light can be  │
+│      the bottleneck     │
+└─────────────────────────┘
+```
+- the "L" in "latency" is for "light speed"
+- physical distance is important
+
+---
+## Why is the web slow?
+```
+┌───────────────────────┐
+│ Network: Bundle sizes │
+└───────────────────────┘
+```
+- complete CSS spec is 20kb
+- brotli is gzip compat and 10% smaller
+- zopfli is new and 30% smaller
+- nobody really changes TCP frame sizes
+- HTTP2 is not magic
+
+---
+## Why is the web slow?
+```
+┌────────────────────┐
+│ Network: Takeaways │
+└────────────────────┘
+```
+- 1st renderable page should be in 1st eth packet
+- CSS + HTML + JS should be under 60kb
+- HTTP2 won't save you
+
+---
+## Why is the web slow?
+```
+┌──────────────────────────┐
+│ Applications: Boot times │
+└──────────────────────────┘
+```
+- time to boot JS engine is __TODO: benchmark boot time__
+- time to boot browserify is __TODO: benchmark browserify boot time__
+- all of the above is irrelevant compared to network times
+
+---
+## Why is the web slow?
+```
+┌────────────────────────────────────────┐
+│ Applications: Ahead of time evaluation │
+└────────────────────────────────────────┘
+```
+- ahead of time evaluation
+- facebook has experimental compiler to inline
+- time to boot JS engine is __TODO: benchmark boot time__
+- time to boot browserify is __TODO: benchmark browserify boot time__
+- all of the above is irrelevant compared to network times
+
 - time to boot of a regular web page
 - CPU spikes during booting are bad for battery life
 - most sites only use 1/8 cores
 - The web is slow, and most humans don't seem to know why
 
 ---
-## So what we talkin 'bout today?
+## Thanks y'all!
+- twitter.com/yoshuawuyts
+- github.com/yoshuawuyts
 
----
-## Shout outs
-- Nolawson - great work on offline-first JS
-- Patrick Steele Idem - for building morphdom
+Slides available on:
+- https://github.com/yoshuawuyts/talks/2016-10-nodeconf-eu
+- npm i -g tslide to view the slides
