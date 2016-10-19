@@ -7,7 +7,7 @@
 │    Yoshua Wuyts         │██
 │    2016-10-19           │██
 │                         │██
-│   [ epilepsia free ]    │██
+│   [ epilepsia proof ]   │██
 │                         │██
 └─────────────────────────┘██
   ███████████████████████████
@@ -32,11 +32,20 @@
 ---
 ## So what we talkin 'bout today?
 
-- Warning ahead: this is a coneptual
-  talk. The conclusions posted are
-  subjective and not based on science™.
-  It's cool if you take my word for things
-  but always do your own research
+- Warning ahead: The conclusions posted are
+  subjective and not exact science™. It's
+  cool if you take my word for things but
+  always do your own research
+
+---
+```
+┌─────────────────────────┐
+│                         │██
+│    The web anno now     │██
+│                         │██
+└─────────────────────────┘██
+  ███████████████████████████
+```
 
 ---
 ## The web anno now
@@ -136,7 +145,18 @@ Basscss  |  14kB |   287 |       347
 │                         │
 └─────────────────────────┘
 ```
-* free interpretation
+* free interpretation of interactions
+  with humans that work on AMP
+
+---
+```
+┌─────────────────────────┐
+│                         │██
+│   The pieces of perf    │██
+│                         │██
+└─────────────────────────┘██
+  ███████████████████████████
+```
 
 ---
 ## The pieces of perf
@@ -162,6 +182,19 @@ Basscss  |  14kB |   287 |       347
 2. time spent booting up
 3. amount of tasks performed
 4. distribution & priotization of tasks
+5. perception of the processes above
+
+---
+## The pieces of perf
+```
+┌────────────────────────────────┐
+│  What are the pieces of perf   │
+│      on per-resource basis?    │
+└────────────────────────────────┘
+```
+1. time spent on the network
+2. time spent interpreting
+3. time spent executing
 
 ---
 ## The pieces of perf
@@ -172,6 +205,7 @@ Basscss  |  14kB |   287 |       347
 ```
 - setup
 - main loop
+- perceived perf
 
 ---
 ## The pieces of perf
@@ -188,9 +222,12 @@ Basscss  |  14kB |   287 |       347
   - operation count
   - parallelism
   - task distribution
+- perceived perf
+  - design
+  - psychological trickery
 
 ---
-## Why is the web slow?
+## The pieces of perf
 ```
 ┌────────────────────────────┐
 │ Setup/network: Key Metrics │
@@ -205,72 +242,193 @@ TCP frame data cap |   60kb
 ```
 
 ---
-## Why is the web slow?
 ```
 ┌─────────────────────────┐
-│    Remember that the    │
-│  speed of light can be  │
-│      the bottleneck     │
-└─────────────────────────┘
+│                         │██
+│     Speeding it up      │██
+│                         │██
+└─────────────────────────┘██
+  ███████████████████████████
 ```
-- the "L" in "latency" is for "light speed"
-- physical distance is important
 
 ---
-## Why is the web slow?
+## Speeding it up
 ```
-┌───────────────────────┐
-│ Network: Bundle sizes │
-└───────────────────────┘
+┌────────────────────────────┐
+│        Setup/caching       │
+└────────────────────────────┘
+```
+- Content Distribution Networks!!
+- put servers close to users
+- web 3.0 P2P apps will be 🆒
+- leverage browser caching (IDB, SvcWrk.)
+
+---
+## Speeding it up
+```
+┌────────────────────────────┐
+|    Setup/assets: Styling   │
+└────────────────────────────┘
+```
+- use new wave OOCSS (e.g. tachyons)
+- don't use custom fonts (e.g. 50kb / 3 req)
+- remember CSS, the language™ is 20kB
+- interpreting old, boring CSS is fast
+
+---
+## Speeding it up
+```
+┌────────────────────────────┐
+|    Setup/assets: Images    │
+└────────────────────────────┘
+```
+1. don't use images
+2. ??? (not my domain)
+
+---
+## Speeding it up
+```
+┌─────────────────────────────┐
+│    Setup/network: Bundles   │
+└─────────────────────────────┘
 ```
 - complete CSS spec is 20kb
 - brotli is gzip compat and 10% smaller
-- zopfli is new and 30% smaller
-- nobody really changes TCP frame sizes
-- HTTP2 is not magic
+- zopfli is new, ok supported and 30% smaller
+- IE8+ targets have viable 5kb frameworks now
+- don't bundle in node core modules
 
 ---
-## Why is the web slow?
+## Speeding it up
 ```
-┌────────────────────┐
-│ Network: Takeaways │
-└────────────────────┘
+┌─────────────────────────────┐
+│  Setup/network: Takewaways  │
+└─────────────────────────────┘
 ```
-- 1st renderable page should be in 1st eth packet
-- CSS + HTML + JS should be under 60kb
-- HTTP2 won't save you
+- aim to render ASAP (1st packet perhaps?)
+- CSS/HTML/JS should be under 60kb (TCP cap)
+- HTTP2 provides header encoding
+- bandwidth and latency restraints always apply
+- hitting the network is a last resort
 
 ---
-## Why is the web slow?
+## Speeding it up
 ```
-┌──────────────────────────┐
-│ Applications: Boot times │
-└──────────────────────────┘
+┌─────────────────────────────┐
+│       Setup: Javascript     │
+└─────────────────────────────┘
 ```
-- time to boot JS engine is __TODO: benchmark boot time__
-- time to boot browserify is __TODO: benchmark browserify boot time__
-- all of the above is irrelevant compared to network times
+- network
+- interpreting
+- execution (but we can minimize this)
 
 ---
-## Why is the web slow?
+## Speeding it up
 ```
-┌────────────────────────────────────────┐
-│ Applications: Ahead of time evaluation │
-└────────────────────────────────────────┘
+┌─────────────────────────────┐
+│       Setup: Javascript     │
+└─────────────────────────────┘
 ```
-- ahead of time evaluation
-- facebook has experimental compiler to inline
-- time to boot JS engine is __TODO: benchmark boot time__
-- time to boot browserify is __TODO: benchmark browserify boot time__
-- all of the above is irrelevant compared to network times
+```js
+// boring.js
+var foo = 3 + 2
 
-- time to boot of a regular web page
-- CPU spikes during booting are bad for battery life
-- most sites only use 1/8 cores
-- The web is slow, and most humans don't seem to know why
+// with static-eval magic
+var foo = 5
+```
+
+---
+## Speeding it up
+```
+┌─────────────────────────────┐
+│       Setup: Javascript     │
+└─────────────────────────────┘
+```
+- requires manual tailoring
+- it's basically macros
+- I wish we had macros
+- Babel team has done work for generic solution
+
+---
+## Speeding it up
+```
+┌──────────────────────────────┐
+│  Main loop: Operation count  │
+└──────────────────────────────┘
+```
+- Garbage Collection pauses 😰
+- GC pauses 😰
+- GC 😰
+
+---
+## Speeding it up
+```
+┌──────────────────────────────┐
+│  Main loop: Operation count  │
+└──────────────────────────────┘
+```
+- mutable > immutable
+- creating new Objects is expensive (!!!)
+- less operations is better
+- ES3 has quite predictable perf results
+- boring code is probably fast code
+
+---
+## Speeding it up
+```
+┌──────────────────────────────┐
+│    Main loop: Parallelism    │
+└──────────────────────────────┘
+```
+- an average phone has 6-8 cores
+- JS by default uses 1 thread on 1 core
+- 60fps can be hard
+
+---
+## Speeding it up
+```
+┌──────────────────────────────┐
+│    Main loop: Parallelism    │
+└──────────────────────────────┘
+```
+- offload work from the UI thread
+- use all the cores
+- not all objects can cross thread boundries
+- pretty experimental stuff, still
+- don't forget about the battery
+
+---
+## Speeding it up
+```
+┌──────────────────────────────┐
+│       Main loop: Others      │
+└──────────────────────────────┘
+```
+- RequestAnimationFrame is amazing
+- debounce is like RAF but localized
+
+---
+```
+┌─────────────────────────┐
+│                         │██
+│         Summary         │██
+│                         │██
+└─────────────────────────┘██
+  ███████████████████████████
+```
+
+---
+## Summary
+
+- sites are pretty big today
+- we can make radical optimizations
+- hard constraints exist
+- almost every step can be optimized
+- GC pauses 😰
 
 ---
 ## Thanks y'all!
+
 - twitter.com/yoshuawuyts
 - github.com/yoshuawuyts
 
