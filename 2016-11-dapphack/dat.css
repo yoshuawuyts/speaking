@@ -1,0 +1,14 @@
+body {
+  color: #293648;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Lucida Grande', Arial, sans-serif;
+}
+
+a {
+  color: #35B44F;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #24943A;
+}
