@@ -34,6 +34,8 @@ Slides, proposals and more for talks I give.
 [2016-12] aborted   holyjs           the frontend resistance
 [2016-12] accepted  code europe      boarding the tiny framework train
 [2016-12] denied    jsconf-au        itty bitty websites
+[2017-05] pending   jsconf-eu        Go! Go! Nanoframeworks!
+[2017-06] pending   fluent           Go! Go! Nanoframeworks!
 ```
 
 ## Recordings
