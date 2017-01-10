@@ -42,6 +42,7 @@ Slides, proposals and more for talks I give.
 - __\[2016-06\] nodeconf-oslo:__ [tiny messages for big systems](https://opbeat.com/events/nodeconf-oslo-2016/#tiny-messages-for-big-architectures)
 - __\[2016-08\] remote-meetup:__ [choo choo choo](https://www.bigmarker.com/remote-meetup/Javascript-Remote-Meetup-Cycle-and-Choo)
 - __\[2016-09\] node-interactive:__ [deep dive into browserify](https://www.youtube.com/watch?v=-LCLeV7swkA)
+- __\[2016-11\] nodefest:__ [boarding the tiny framework train](https://www.youtube.com/watch?v=q0K9eMP5fwU)
 
 ## See Also
 - [mafintosh/slides](https://github.com/mafintosh/slides)
