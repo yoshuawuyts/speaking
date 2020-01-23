@@ -1,6 +1,6 @@
 # CFP Rust Latam
 
-- Title: Tide & Surf
+- Title: Designing Tide & Surf
 - Tags: intermediate / advanced
 - Language: EN (though considering doing ES; native speaker, but never
 presented about tech in ES before -- might want to)
@@ -9,12 +9,23 @@ presented about tech in ES before -- might want to)
 
 ## Committee Details
 
+The talk will start stating the importance for Rust to have a web presence,
+drawing on numbers from the Rust and StackOverflow surveys. We'll then share
+the work we've been doing to solve this: Surf & Tide, a framework pairing of
+HTTP server and HTTP client. After a brief introduction we'll cover several
+unique features they provide, how they've been made possible by Rust.
+
+The purpose of this talk is to lift the covers on the design process that
+goes into building something as complex as a web framework in Rust. Rust's is
+a unique language, and sharing the process of something novel might prove to
+be insightful for many of aspirational Rust users.
+
 ## Committee Pitch
 
 Between 2018-2019 I was the co-lead of the Rust Net WG, which subsequently
 became the Rust Async Ecosystem WG. Much of the work we did was research ways
 to make asynchronous Rust more accessible to people. And async-std, tide, and
-surf are the products of much of the work that happened in that time period.
+surf are the products of much of the work that happened during that time.
 
 ## Why are you excited?
 
@@ -46,3 +57,9 @@ and run livestreams. Highlights include:
 I've spoken at-length about JavaScript frameworks in the past. This would be
 the first time I present publicly about the work we've done on Tide, Surf,
 and our HTTP stack.
+
+## Bio
+
+Yosh is a sofware engineer based in Berlin. He's previously co-led the Rust
+Async Ecosystem WG, and is the co-author of the async-std, tide, and surf
+crates.
