@@ -37,6 +37,7 @@ Slides, proposals and more for talks I give.
 [2017-05] pending   jsconf-eu        Go! Go! Nanoframeworks!
 [2017-05] pending   jsday-it         Go! Go! Nanoframeworks!
 [2017-06] pending   fluent           Go! Go! Nanoframeworks!
+[2017-06] accepted  amsterdamjs      Browser Framework Fundamentals
 ```
 
 ## Recordings
