@@ -7,6 +7,16 @@ presented about tech in ES before -- might want to)
 
 ## Abstract
 
+Rust is going through a meteoric rise - increasingly underpinning some of the
+largest infrastructure deployments in the world. Much of that has to do with
+networking, and is considered pretty advanced. But what if we told you that
+you too could be writing advanced networking code?
+
+In this talk Yosh will walk you through the design of Tide and Surf, an HTTP
+server and client pair. And explain how they work, the decisions that went
+into their design, and how they make writing high performance Rust code
+accessible to everyone.
+
 ## Committee Details
 
 The talk will start stating the importance for Rust to have a web presence,
